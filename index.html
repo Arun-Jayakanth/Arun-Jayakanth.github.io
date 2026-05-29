@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
   :root {
     --bg: #080808;
     --surface: #0f0f0f;
@@ -20,9 +19,7 @@
     --accent-dim: rgba(200, 240, 96, 0.08);
     --accent-glow: rgba(200, 240, 96, 0.15);
   }
-
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--bg);
     color: var(--text);
@@ -32,8 +29,6 @@
     cursor: none;
     overflow-x: hidden;
   }
-
-  /* Custom cursor */
   .cursor {
     position: fixed;
     width: 8px; height: 8px;
@@ -56,8 +51,6 @@
   }
   .cursor.hover { width: 14px; height: 14px; }
   .cursor-ring.hover { width: 48px; height: 48px; border-color: rgba(200,240,96,0.6); }
-
-  /* Grain overlay */
   body::before {
     content: '';
     position: fixed;
@@ -67,8 +60,6 @@
     z-index: 9000;
     opacity: 0.5;
   }
-
-  /* Nav */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -104,8 +95,6 @@
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--text); }
-
-  /* Hero */
   #hero {
     min-height: 100vh;
     display: grid;
@@ -115,7 +104,6 @@
     position: relative;
     overflow: hidden;
   }
-
   .hero-grid-lines {
     position: absolute;
     inset: 0;
@@ -125,9 +113,7 @@
     background-size: 80px 80px;
     mask-image: radial-gradient(ellipse at 60% 50%, black 30%, transparent 70%);
   }
-
   .hero-left { padding-top: 80px; }
-
   .hero-tag {
     display: inline-flex;
     align-items: center;
@@ -145,7 +131,6 @@
     width: 24px; height: 1px;
     background: var(--accent);
   }
-
   .hero-name {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
@@ -157,7 +142,6 @@
     animation: fadeUp 0.6s ease forwards 0.35s;
   }
   .hero-name .line2 { color: var(--muted); }
-
   .hero-desc {
     max-width: 420px;
     color: var(--muted);
@@ -167,14 +151,12 @@
     animation: fadeUp 0.6s ease forwards 0.5s;
   }
   .hero-desc strong { color: var(--text); font-weight: 400; }
-
   .hero-ctas {
     display: flex;
     gap: 16px;
     opacity: 0;
     animation: fadeUp 0.6s ease forwards 0.65s;
   }
-
   .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -191,7 +173,6 @@
     transition: background 0.2s, transform 0.2s;
   }
   .btn-primary:hover { background: #d4f570; transform: translateY(-1px); }
-
   .btn-secondary {
     display: inline-flex;
     align-items: center;
@@ -207,8 +188,6 @@
     transition: border-color 0.2s, color 0.2s, transform 0.2s;
   }
   .btn-secondary:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
-
-  /* Hero right — terminal */
   .hero-right {
     display: flex;
     justify-content: flex-end;
@@ -216,7 +195,6 @@
     opacity: 0;
     animation: fadeIn 0.8s ease forwards 0.8s;
   }
-
   .terminal {
     width: 380px;
     background: var(--surface);
@@ -250,8 +228,6 @@
     vertical-align: middle;
     margin-left: 2px;
   }
-
-  /* Sections */
   section { padding: 100px 48px; }
   .section-label {
     font-size: 11px;
@@ -277,8 +253,6 @@
     letter-spacing: -0.02em;
     margin-bottom: 60px;
   }
-
-  /* Experience */
   #experience { border-top: 1px solid var(--border); }
   .exp-grid { display: flex; flex-direction: column; }
   .exp-item {
@@ -328,8 +302,6 @@
     margin-right: 6px;
     animation: pulse 2s ease infinite;
   }
-
-  /* Skills */
   #skills { border-top: 1px solid var(--border); }
   .skills-grid {
     display: grid;
@@ -352,8 +324,6 @@
     margin-bottom: 8px;
   }
   .skill-list { color: var(--muted); font-size: 12px; line-height: 2; }
-
-  /* Projects */
   #projects { border-top: 1px solid var(--border); }
   .projects-grid {
     display: grid;
@@ -388,8 +358,6 @@
     margin-bottom: 12px;
   }
   .project-desc { color: var(--muted); font-size: 13px; line-height: 1.8; margin-bottom: 20px; }
-
-  /* Contact */
   #contact {
     border-top: 1px solid var(--border);
     text-align: center;
@@ -419,8 +387,6 @@
     transition: color 0.2s, border-color 0.2s;
   }
   .contact-link:hover { color: var(--accent); border-color: var(--accent); }
-
-  /* Footer */
   footer {
     border-top: 1px solid var(--border);
     padding: 24px 48px;
@@ -429,8 +395,6 @@
     align-items: center;
   }
   footer p { color: var(--muted); font-size: 11px; letter-spacing: 0.06em; }
-
-  /* Animations */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -447,15 +411,12 @@
     0%, 100% { opacity: 1; box-shadow: 0 0 0 0 var(--accent-glow); }
     50% { opacity: 0.8; box-shadow: 0 0 0 4px transparent; }
   }
-
-  /* Scroll reveal */
   .reveal {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
   .reveal.visible { opacity: 1; transform: none; }
-
   @media (max-width: 900px) {
     nav { padding: 20px 24px; }
     .nav-links { display: none; }
@@ -470,10 +431,8 @@
 </style>
 </head>
 <body>
-
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
-
 <nav id="nav">
   <a href="#" class="nav-logo">A<span>.</span>J</a>
   <ul class="nav-links">
@@ -483,7 +442,6 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
-
 <!-- HERO -->
 <section id="hero">
   <div class="hero-grid-lines"></div>
@@ -503,7 +461,6 @@
       <a href="#experience" class="btn-secondary">View work</a>
     </div>
   </div>
-
   <div class="hero-right">
     <div class="terminal">
       <div class="terminal-bar">
@@ -524,7 +481,6 @@
     </div>
   </div>
 </section>
-
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label reveal">Experience</div>
@@ -532,11 +488,11 @@
   <div class="exp-grid">
 
     <div class="exp-item reveal">
-      <div class="exp-date">2024</div>
+      <div class="exp-date">Jan – May 2024</div>
       <div>
         <div class="exp-role">Software Cadet</div>
         <div class="exp-company">WiseTech Global</div>
-        <div class="exp-desc">Contributed to real-world projects within accounting and logistics teams. Gained hands-on experience with version control workflows, frontend development, and cross-functional team collaboration inside one of Australia's leading ASX-listed tech companies.</div>
+        <div class="exp-desc">Contributed to real-world projects within accounting and logistics teams under mentorship. Gained hands-on experience with version control workflows, frontend development, and cross-functional team collaboration inside one of Australia's leading ASX-listed tech companies.</div>
         <div class="exp-tags">
           <span class="tag">C</span>
           <span class="tag">C#</span>
@@ -550,10 +506,10 @@
     </div>
 
     <div class="exp-item reveal">
-      <div class="exp-date">2024–Present</div>
+      <div class="exp-date">2025 – Present</div>
       <div>
         <div class="exp-role">Tech Lead</div>
-        <div class="exp-company">Independent Tutoring Business</div>
+        <div class="exp-company">Luminate Tuition</div>
         <div class="exp-desc">Leading the technical rebuild of a tutoring platform — migrating from Wix to a fully custom-coded site with a live database, booking system, and tutor portal. Responsible for architecture decisions, frontend development, and deployment.</div>
         <div class="exp-tags">
           <span class="tag">Full-Stack</span>
@@ -566,11 +522,11 @@
     </div>
 
     <div class="exp-item reveal">
-      <div class="exp-date">2024–Present</div>
+      <div class="exp-date">Jun 2024 – Present</div>
       <div>
         <div class="exp-role">Warehouse Operations</div>
         <div class="exp-company">Amazon · Various · Sapphire Group</div>
-        <div class="exp-desc">2+ years across multiple warehouse environments including Amazon fulfilment and specialist chemical batching operations. Demonstrates reliability, process discipline, and the ability to perform across diverse, high-pressure environments.</div>
+        <div class="exp-desc">2+ years across multiple warehouse environments including Amazon fulfilment and specialist chemical batching operations at Sapphire Group. Demonstrates reliability, process discipline, and the ability to perform across diverse, high-pressure environments.</div>
         <div class="exp-tags">
           <span class="tag">Operations</span>
           <span class="tag">Process</span>
@@ -582,7 +538,6 @@
 
   </div>
 </section>
-
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-label reveal">Skills</div>
@@ -605,7 +560,6 @@
     </div>
   </div>
 </section>
-
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-label reveal">Projects</div>
@@ -613,7 +567,7 @@
   <div class="projects-grid reveal">
     <div class="project-card">
       <div class="project-num">01 / Active</div>
-      <div class="project-title">Tutoring Platform</div>
+      <div class="project-title">Luminate Tuition Platform</div>
       <div class="project-desc">Full rebuild of a tutoring business website. Custom-coded frontend, relational database, booking system, and tutor management portal. Replacing a Wix site with a production-grade application.</div>
       <div class="exp-tags">
         <span class="tag">HTML/CSS/JS</span>
@@ -622,17 +576,7 @@
       </div>
     </div>
     <div class="project-card">
-      <div class="project-num">02 / Active</div>
-      <div class="project-title">ABI — AI Assistant</div>
-      <div class="project-desc">Personal AI project built on top of the Anthropic API. Exploring conversational AI design, prompt engineering, and building intelligent interfaces from scratch.</div>
-      <div class="exp-tags">
-        <span class="tag">Python</span>
-        <span class="tag">Anthropic API</span>
-        <span class="tag">AI Design</span>
-      </div>
-    </div>
-    <div class="project-card">
-      <div class="project-num">03 / In Progress</div>
+      <div class="project-num">02 / In Progress</div>
       <div class="project-title">DataLemur Practice</div>
       <div class="project-desc">Systematic SQL and data interview prep. Targeting data analyst and data science internship roles across Australia. Documenting solutions and patterns.</div>
       <div class="exp-tags">
@@ -642,7 +586,7 @@
       </div>
     </div>
     <div class="project-card">
-      <div class="project-num">04 / Planned</div>
+      <div class="project-num">03 / Planned</div>
       <div class="project-title">Data Analysis Project</div>
       <div class="project-desc">An end-to-end personal data project — sourcing a real dataset, cleaning it in Python, running analysis, and publishing findings. Coming soon.</div>
       <div class="exp-tags">
@@ -651,29 +595,35 @@
         <span class="tag">Visualisation</span>
       </div>
     </div>
+    <div class="project-card">
+      <div class="project-num">04 / Live</div>
+      <div class="project-title">Portfolio Website</div>
+      <div class="project-desc">Designed and built this portfolio from scratch — custom animations, terminal UI, scroll reveals, and responsive layout. Hosted on GitHub Pages.</div>
+      <div class="exp-tags">
+        <span class="tag">HTML/CSS/JS</span>
+        <span class="tag">GitHub Pages</span>
+        <span class="tag">Design</span>
+      </div>
+    </div>
   </div>
 </section>
-
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-label reveal" style="justify-content:center">Contact</div>
   <h2 class="contact-title reveal">Let's<br><span>talk.</span></h2>
-  <p class="contact-sub reveal">Open to data analyst and data science internships in Australia. Available from late 2026.</p>
+  <p class="contact-sub reveal">Open to data analyst and data science internships in Sydney. Available from late 2026.</p>
   <div class="contact-links reveal">
     <a href="mailto:arunachan@email.com" class="contact-link">Email</a>
     <a href="https://www.linkedin.com/in/arunachan-jayakanth" class="contact-link">LinkedIn</a>
     <a href="https://github.com/Arun-Jayakanth" class="contact-link">GitHub</a>
-    <a href="https://Arun-Jayakanth.github.io/resume.pdf" class="contact-link">Resume ↓</a>
+    <a href="https://arun-jayakanth.github.io/resume.pdf" class="contact-link">Resume ↓</a>
   </div>
 </section>
-
 <footer>
   <p>© 2026 Arunachan Jayakanth</p>
   <p>Computing Science (Hons) · Available for internships</p>
 </footer>
-
 <script>
-  // Cursor
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
   let mx = 0, my = 0, rx = 0, ry = 0;
@@ -692,14 +642,10 @@
     el.addEventListener('mouseenter', () => { cursor.classList.add('hover'); ring.classList.add('hover'); });
     el.addEventListener('mouseleave', () => { cursor.classList.remove('hover'); ring.classList.remove('hover'); });
   });
-
-  // Nav scroll
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
   });
-
-  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver(entries => {
     entries.forEach((e, i) => {
